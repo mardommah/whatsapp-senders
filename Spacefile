@@ -1,0 +1,7 @@
+v: 0
+icon: ./icon.png
+micros:
+  - name: wa-sender
+    src: .
+    engine: python3.9
+    run: uvicorn index:app
