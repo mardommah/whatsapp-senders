@@ -33,18 +33,18 @@ class KirimWA:
 
     print(payload)
 
-    # try:
-    request = cls_requests[method](
-        url, headers=headers, data=payload, params=params
-    )
-    response_result = request.json()
-    # except Exception as e:
-    #     raise HTTPException(
-    #         status_code=status.HTTP_500_INTERNAL_SERVER_ERROR, detail=str(e)
-    #     )
-    # if request.status_code not in (200, 201):
-    #     raise HTTPException(
-    #         status_code=request.status_code,
-    #         detail=response_result.get("errors") or response_result.get("error"),
-    #     )
+    try:
+      request = cls_requests[method](
+          url, headers=headers, data=payload, params=params
+      )
+      response_result = request.json()
+    except Exception as e:
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR, detail=str(e)
+        )
+    if request.status_code not in (200, 201):
+        raise HTTPException(
+            status_code=request.status_code,
+            detail=response_result.get("errors") or response_result.get("error"),
+        )
     return response_result
