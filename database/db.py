@@ -10,7 +10,8 @@ SQLALCHEMY_DATABASE_URL = URL.create(
   username=config.db_user,
   password=config.db_pass,
   host=config.db_host,
-  database=config.db_name
+  database=config.db_name,
+  port=3306
 )
 
 # create database engine
