@@ -20,6 +20,8 @@ class Config(BaseSettings):
   db_pass: str = os.getenv("DB_PASS")
   db_name: str = os.getenv("DB_NAME")
 
+  access_token_expire_time: str = os.getenv("ACCESS_TOKEN_EXPIRE_MINUTE")
+
 
   class Config():
     env_file = ".env"
