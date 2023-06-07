@@ -8,7 +8,7 @@ import json
 
 from app.config import config
 from dependency.checker import check_key, get_api_key
-from models.message_model import SendMessageModels
+from schemas.message_schemas import SendMessageModels
 
 
 kirim_wa = KirimWA()

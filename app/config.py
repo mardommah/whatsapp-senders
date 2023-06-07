@@ -11,6 +11,14 @@ class Config(BaseSettings):
 
   api_key_kirim_wa: str = os.getenv("API_KEY_KIRIMWA")
   api_key: str = os.getenv("KEY")
+  algorithm: str = os.getenv("ALGORITHM")
+  secret_key: str = os.getenv("SECRET_KEY")
+
+  # DATABASE
+  db_host: str = os.getenv("DB_HOST")
+  db_user: str = os.getenv("DB_USER")
+  db_pass: str = os.getenv("DB_PASS")
+  db_name: str = os.getenv("DB_NAME")
 
 
   class Config():
