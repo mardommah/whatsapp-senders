@@ -21,7 +21,7 @@ class UserInfoBase(BaseModel):
 
 
 class UserCreate(UserInfoBase):
-    fullname: str
+    full_name: str
     password: str
 
 
