@@ -25,3 +25,25 @@ class URL(Base):
   target_url = Column(String, index=True)
   is_active = Column(Boolean, default=True)
   clicks = Column(Integer, default=0)
+
+
+class DataPembeli(Base):
+  __tablename__ = "data_pembelian"
+
+  id = Column(Integer, primary_key=True, autoincrement=True)
+  order_id = Column(Integer)
+  product_name = Column(String(200))
+  order_total = Column(Integer)
+  payment_method = Column(String(50))
+  first_name = Column(String(50))
+  last_name = Column(String(50))
+  address = Column(String(250))
+  city = Column(String(50))
+  post_code = Column(String(50))
+  email = Column(String(100))
+  phone = Column(String(30))
+  date_created = Column(String(30))
+
+  
+
+  
